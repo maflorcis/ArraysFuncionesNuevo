@@ -34,3 +34,41 @@ for (let i = 1; i <= 50; i++) {
 }
 
 document.write(miArray);
+
+//mostrar con qué frecuencia aparecen los resultados de todas las sumas
+
+/*Ejemplo de la profe abajo*/
+
+//let dado1 = Math.floor(Math.random()* (max-min+1)+min)
+let sumas = []; //array vacío
+let pruebaDado1 = [];
+let pruebaDado2 = [];
+
+for( let i=0; i<10; i++) {
+
+let dado1 = Math.floor(Math.random()* (6-1+1)+1);
+let dado2 = Math.floor(Math.random()* (6-1+1)+1);
+
+let suma = dado1 + dado2
+sumas.push(suma)
+pruebaDado1.push(dado1);
+pruebaDado2.push(dado2);
+}
+document.write('<br>' + 'Resultado prueba del primer dado' + pruebaDado1);
+document.write('<br>' + 'Resultado prueba del segundo dado' + pruebaDado2);
+
+document.write('<br>' + 'Resultados de la suma' + sumas);
+
+document.write(`<table>
+<tbody> 
+<tr><td>Resultado </td> <td>Frecuencia</td> <tr>
+`)
+for (let resultado =2; resultado <=12; resultado++){
+  document.write(`<tr><td>2 </td> <td>x</td> <tr></tr>`);
+    for(let posicion = 0; posicion < sumas.length; posicion++){
+      if(resultado === sumas [posicion]){
+        //sumar las apariciones
+      }
+    }
+}
+document.write(`<tbody></table>`)
